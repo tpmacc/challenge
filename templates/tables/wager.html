@@ -1,0 +1,59 @@
+
+<div>
+    <div class="section">
+        <div class="row valign-wrapper">
+            <div class="col s2">
+                <img class="responsive-img" src="http://www.cjadeltas.org/wp-content/uploads/2017/03/wild-wings-badge.png">
+            </div>
+            <div class="col s10"><h3>Buffalo Wild Wings Challenge</h3></div>
+        </div>
+    </div>
+    {{range .}}
+        <div class="card-panel red darken-4">
+            <span class="white-text text-white">{{.Name}}</span>
+        </div>
+            <table class="highlight">
+                <tr>
+                    <th>#</th>
+                    <th>Team</th>
+                    <th>GP</th>
+                    <th>W</th>
+                    <th>D</th>
+                    <th>L</th>
+                    <th>GF</th>
+                    <th>GA</th>
+                    <th>GD</th>
+                    <th>Pts</th>
+                </tr>
+            {{range .Teams}}
+                <tr>
+                    <td>{{.Position}}</td>
+                    <td>{{.Team.Name}}</td>
+                    <td>{{.PlayedGames}}</td>
+                    <td>{{.Won}}</td>
+                    <td>{{.Draw}}</td>
+                    <td>{{.Lost}}</td>
+                    <td>{{.GoalsFor}}</td>
+                    <td>{{.GoalsAgainst}}</td>
+                    <td>{{.GoalDifference}}</td>
+                    <td>{{.Points}}</td>
+                </tr>
+            {{end}}
+                <tr>
+                    <td></td>
+                    <td>Total</td>
+                    <td>{{.Totals.PlayedGames}}</td>
+                    <td>{{.Totals.Won}}</td>
+                    <td>{{.Totals.Draw}}</td>
+                    <td>{{.Totals.Lost}}</td>
+                    <td>{{.Totals.GoalsFor}}</td>
+                    <td>{{.Totals.GoalsAgainst}}</td>
+                    <td>{{.Totals.GoalDifference}}</td>
+                    <td>{{.Totals.Points}}</td>
+                </tr>
+
+            </table>
+        </div>
+    {{end}}
+</div>
+

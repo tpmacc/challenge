@@ -1,0 +1,32 @@
+    <div class="panel panel-default">
+        <!-- Default panel contents -->
+        <div class="panel-heading">{{.LeagueCaption}}</div>
+        <table class="table">
+            <tr>
+                <th>#</th>
+                <th>Team</th>
+                <th>GP</th>
+                <th>W</th>
+                <th>D</th>
+                <th>L</th>
+                <th>GF</th>
+                <th>GA</th>
+                <th>GD</th>
+                <th>Pts</th>
+            </tr>
+        {{range .Standing}}
+            <tr>
+                <td>{{.Position}}</td>
+                <td>{{.TeamName}}</td>
+                <td>{{.PlayedGames}}</td>
+                <td>{{.Wins}}</td>
+                <td>{{.Draws}}</td>
+                <td>{{.Losses}}</td>
+                <td>{{.Goals}}</td>
+                <td>{{.GoalsAgainst}}</td>
+                <td>{{.GoalDifference}}</td>
+                <td>{{.Points}}</td>
+            </tr>
+        {{end}}
+        </table>
+    </div>
